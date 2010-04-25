@@ -17,6 +17,11 @@
       <a href="http://www..../contact">Contact</a><br />
     </div>
     <div id="main">
+      <% if flash[:notice] -%>
+        <div id="notice">
+          <%= flash[:notice] %>
+        </div>
+      <% end -%>
       <%= @content_for_layout %>
     </div>
   </div>
