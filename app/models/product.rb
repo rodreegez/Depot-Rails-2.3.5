@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+  # Validations
   validates_presence_of :title, :description, :image_url
   validates_numericality_of :price
   validates_uniqueness_of :title
@@ -8,6 +9,12 @@ class Product < ActiveRecord::Base
 
   validate :price_must_be_at_least_a_cent
 
+  # Class methods
+  def self.find_all_products_for_sale
+    find(:all, :order => 'title')
+  end
+
+  # Protected methods
   protected
   def price_must_be_at_least_a_cent
     errors.add(:price, 'should be at least 0.01') if price.nil? ||
