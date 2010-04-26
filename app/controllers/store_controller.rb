@@ -1,6 +1,7 @@
 class StoreController < ApplicationController
   def index
     @products = Product.find_all_products_for_sale
+    @cart = find_cart
   end
 
   def add_to_cart
