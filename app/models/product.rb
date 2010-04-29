@@ -1,4 +1,7 @@
 class Product < ActiveRecord::Base
+
+  has_many :line_items
+
   # Validations
   validates_presence_of :title, :description, :image_url
   validates_numericality_of :price
