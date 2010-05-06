@@ -18,11 +18,6 @@ class StoreController < ApplicationController
     redirect_to :action => 'index'
   end
 
-  def redirect_to_index(msg = nil)
-    flash[:notice] = msg if msg
-    redirect_to :action => 'index'
-  end
-
   def empty_cart
     session[:cart] = nil
     redirect_to_index
@@ -47,6 +42,11 @@ class StoreController < ApplicationController
     else
       render :action => 'checkout'
     end
+  end
+
+  def redirect_to_index(msg = nil)
+    flash[:notice] = msg if msg
+    redirect_to :action => 'index'
   end
 
   private
