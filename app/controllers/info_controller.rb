@@ -8,4 +8,8 @@ class InfoController < ApplicationController
     end
   end
 
+  protected
+    def authorize
+  end
+
 end
