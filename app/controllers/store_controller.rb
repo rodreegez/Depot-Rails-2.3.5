@@ -51,6 +51,10 @@ class StoreController < ApplicationController
 
   private
 
+  def authorize
+
+  end
+
   def find_cart
     session[:cart] ||= Cart.new
   end
