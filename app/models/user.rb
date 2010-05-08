@@ -10,6 +10,17 @@ class User < ActiveRecord::Base
 
   validate :password_non_blank
 
+  def self.authenticate(name, password)
+    user = self.find_by_name(name)
+    if user
+      expected_password = encrypted_password(password, user.salt)
+      if user.hashed_password != expected_password
+        user = nil
+      end
+    end
+    user
+  end
+
   def password
     @password
   end
