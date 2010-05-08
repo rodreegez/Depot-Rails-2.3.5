@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
 
   private
 
-  def self.encrypted_password(passowrd, salt)
+  def self.encrypted_password(passoword, salt)
     string_to_hash = password + 'wibble' + salt
     Digest::SAH1.hexgigest(string_to_hash)
   end
