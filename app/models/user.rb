@@ -34,9 +34,9 @@ class User < ActiveRecord::Base
 
   private
 
-  def self.encrypted_password(passoword, salt)
+  def self.encrypted_password(password, salt)
     string_to_hash = password + 'wibble' + salt
-    Digest::SAH1.hexgigest(string_to_hash)
+    Digest::SHA1.hexdigest(string_to_hash)
   end
 
   def password_non_blank
