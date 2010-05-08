@@ -1,0 +1,2 @@
+class WhoBoughtController < ApplicationController
+end
