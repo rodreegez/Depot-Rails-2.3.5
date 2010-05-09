@@ -34,3 +34,6 @@ en:
     title: "Rodreegez's Catalogue"
     button:
       add: "Add to cart"
+
+  flash:
+    thanks: "Thanks for buying!"
