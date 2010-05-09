@@ -6,3 +6,8 @@ en:
       questions: "Questions"
       news: "News"
       contact: "Contact"
+
+  main:
+    title: "Rodreegez's Catalogue"
+    button:
+      add: "Add to cart"
