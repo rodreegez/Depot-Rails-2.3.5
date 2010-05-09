@@ -12,6 +12,15 @@ en:
         empty: "Empty Cart"
         checkout: "Checkout"
 
+  number:
+    currency:
+      format:
+        unit: "$"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format: "%u%n"
+
   main:
     title: "Rodreegez's Catalogue"
     button:

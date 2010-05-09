@@ -12,6 +12,15 @@ es:
         empty: "Vaciar Carrito"
         checkout: "Comprar"
 
+  number:
+    currency:
+      format:
+        unit: "$US"
+        precision: 2
+        separator: ","
+        delimiter: "."
+        format: "%n&nbsp;%u"
+
   main:
     title: "Su Cat&aacute;logo de Rodreegez"
     button:
