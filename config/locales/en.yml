@@ -21,6 +21,15 @@ en:
         delimiter: ","
         format: "%u%n"
 
+  checkout:
+    legend: "Please enter your deets"
+    name: "Name"
+    address: "Address"
+    email: "email addy"
+    pay_type: "Pay by"
+    pay_prompt: "Select a payment method"
+    submit: "Place your order!"
+
   main:
     title: "Rodreegez's Catalogue"
     button:
