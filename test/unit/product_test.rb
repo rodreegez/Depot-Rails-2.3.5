@@ -9,4 +9,21 @@ class ProductTest < ActiveSupport::TestCase
     assert product.errors.invalid?(:price)
     assert product.errors.invalid?(:image_url)
   end
+
+  test "positive price" do
+    product = Product.new(:title       => "My Book Title",
+                          :description => "yyy",
+                          :image_url   => "zzz.jpg")
+    product.price = -1
+    assert !product.valid?
+    assert_equal "should be at least 0.01", product.errors.on(:price)
+
+    product.price = 0
+    assert !product.valid?
+    assert_equal "should be at least 0.01", product.errors.on(:price)
+
+    product.price = 1
+    assert product.valid?
+  end
+
 end
