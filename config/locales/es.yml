@@ -6,6 +6,11 @@ es:
       questions: "Preguntas"
       news: "Noticias"
       contact: "Contacto"
+    cart:
+      title: "Carrito de la Compra"
+      button:
+        empty: "Vaciar Carrito"
+        checkout: "Comprar"
 
   main:
     title: "Su Cat&aacute;logo de Rodreegez"

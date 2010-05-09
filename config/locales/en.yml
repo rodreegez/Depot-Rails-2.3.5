@@ -6,6 +6,11 @@ en:
       questions: "Questions"
       news: "News"
       contact: "Contact"
+    cart:
+      title: "Your Cart"
+      button:
+        empty: "Empty Cart"
+        checkout: "Checkout"
 
   main:
     title: "Rodreegez's Catalogue"
