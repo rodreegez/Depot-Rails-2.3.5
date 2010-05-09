@@ -1,0 +1,8 @@
+es:
+  layout:
+    title: "Rodreez's"
+    side:
+      home: "Inicio"
+      questions: "Preguntas"
+      news: "Noticias"
+      contact: "Contacto"
