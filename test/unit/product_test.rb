@@ -26,4 +26,26 @@ class ProductTest < ActiveSupport::TestCase
     assert product.valid?
   end
 
+  test "image url" do
+    good = %w{ fred.gif fred.jpg fred.png FRED.JPG FRED.Jpg
+               http://a.b.com/x/y/z/fred.gif }
+    bad = %w{ fred.doc fred.blah fred.gif.not_a_gif }
+
+    good.each do |i|
+      p = Product.new(:title => "Product",
+                      :description => "ABC",
+                      :price => "1",
+                      :image_url => i)
+      assert p.valid?, p.errors.full_messages
+    end
+
+    bad.each do |i|
+      p = Product.new(:title => "Product",
+                      :description => "ABC",
+                      :price => "1",
+                      :image_url => i)
+      assert !p.valid?, p.errors.full_messages
+    end
+  end
+
 end
